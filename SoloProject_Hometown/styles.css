@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  color: #F0EBD8;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0d1321;
+
+}
+.wrapper {
+  box-shadow:2px 2px 2p 2px rgba(255,255,255,.2);
+  width: 85%;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 50px;
+  background-color: #1D2D44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  background: url("images/winston-salem-guide-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.hero h1, .hero h2 {
+  margin: 20px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,.5);
+}
+.hero h1 {
+  font-size: 50px;
+  background-color: #3E5C76;
+  
+}
+.hero h2 {
+  font-size: 20px;
+  background-color: #748CAB;
+}
+.link-section {
+  
+  padding: 25px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+
+.activity-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.activity {
+  justify-content: flex-end;
+  width: 400px;
+  margin: 15px;
+  padding: 15px;
+}
+.activity-img {
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.activity-title {
+  background-color: #3E5C76;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #F0EBD8;
+  border-radius: 15px;
+}
+
+
+.activity-text {
+  margin-top: 30px;
+  line-height: 1.5;
+}
+
+.avatar {
+  width: 150px;
+}
+
+.card {
+  flex-direction: row;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: #264653;
+  color: #e76f51;
+  border-bottom: 6px solid #2a9d8f;
+  border-radius: 30px;
+  box-shadow: 5px rgba(0,0,0,.3);
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 750px) {
+
+ .wrapper {
+  min-width: 100%;
+  margin: 0;
+ }
+  
+ .hero h1 {
+  font-size: 25px;
+ }
+ .hero h2 {
+  font-size: 18px;
+ }
+
+ .link-section h2 {
+  font-size: 25px;
+ }
+
+ .activity-wrapper {
+  flex-direction: column;
+  align-items: center;
+ }
+}
