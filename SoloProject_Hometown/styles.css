@@ -72,7 +72,7 @@ a {
 
 .activity-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 20px;
   align-items: flex-start;
   width: 100%;
