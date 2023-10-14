@@ -128,6 +128,13 @@ body {
   transform: scale(1.05);
 }
 
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 750px) {
 
  .wrapper {
