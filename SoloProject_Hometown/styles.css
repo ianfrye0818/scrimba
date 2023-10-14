@@ -133,6 +133,11 @@ body {
  .wrapper {
   min-width: 100%;
   margin: 0;
+  padding: 0;
+ }
+
+ .hero {
+  border-radius: 0;
  }
   
  .hero h1 {
