@@ -14,12 +14,14 @@ body {
   background-color: #0d1321;
 
 }
+a {
+  text-decoration: none;
+}
 .wrapper {
   box-shadow:2px 2px 2p 2px rgba(255,255,255,.2);
-  width: 85%;
+  width: 95%;
   margin: 15px;
   border-radius: 10px;
-  padding: 50px;
   background-color: #1D2D44;
   display: flex;
   flex-direction: column;
@@ -70,32 +72,38 @@ body {
 
 .activity-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px;
   align-items: flex-start;
-  width: 80%;
+  width: 100%;
 }
 
 .activity {
-  justify-content: flex-end;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 250px;
   margin: 15px;
   padding: 15px;
 }
 .activity-img {
-  width: 150px;
+  width: 100%;
   min-width: 150px;
-  height: 150px;
+  aspect-ratio: 1;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .activity-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #3E5C76;
   padding: 10px 15px;
   font-size: 1rem;
   color: #F0EBD8;
   border-radius: 15px;
+  height: 55px;
 }
 
 
