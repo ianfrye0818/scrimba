@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Solo Project | Scoreboad</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="home-team score-section">
+                <div class="home-team-title title">HOME</div>
+                <div class="home-team-score score">
+                    <h2 id="home-team-score">0</h2>
+                </div>
+                <div class="buttons">
+                    <button id="home-plus-one" onclick="addOne('home')">+1</button>
+                    <button id="home-plus-two" onclick="addTwo('home')">+2</button>
+                    <button id="home-plus-three" onclick="addThree('home')">+3</button>
+                </div>
+            </div>
+            <div class="guest-team score-section">
+                <div class="guest-team-title title">GUEST</div>
+                <div class="guest-team-score score">
+                        <h2 id="guest-team-score">0</h2>
+                </div>
+                <div class="buttons">
+                    <button id="guest-plus-one" onclick="addOne('guest')">+1</button>
+                    <button id="guest-plus-two" onclick="addTwo('guest')">+2</button>
+                    <button id="guest-plus-three" onclick="addThree('guest')">+3</button>
+                </div>
+            </div>
+            
+        </div>
+        <button id="reset-button" onclick="resetAll()">RESET ALL</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
