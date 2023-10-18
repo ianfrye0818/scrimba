@@ -15,11 +15,11 @@ function buildPassword() {
     const passArray = []
     const passwordLength = document.getElementById("number-input").value
     const selectedArray = [
-        [document.getElementById("upper-case-box").checked ? upperCaseLetter : []],
-        [document.getElementById("lower-case-box").checked ? lowerCaseLetters : []],
-        [document.getElementById("symbols-box").checked ? symbols : []],
-        [document.getElementById("number-box").checked ? numbers : []]
-    ].flat().flat()
+        document.getElementById("upper-case-box").checked ? upperCaseLetter : [],
+        document.getElementById("lower-case-box").checked ? lowerCaseLetters : [],
+        document.getElementById("symbols-box").checked ? symbols : [],
+        document.getElementById("number-box").checked ? numbers : []
+    ].flat()
 
     for (let i = 0; i < passwordLength; i ++) {
         passArray.push(selectedArray[Math.floor(Math.random() * selectedArray.length)])
