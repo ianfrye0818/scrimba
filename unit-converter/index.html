@@ -1,0 +1,38 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="top-sub-container">
+                <div class="title-bar">
+                <h1>Unit Converter <span id="version">v1</span></h1>
+                <i class='bx bxs-calculator'></i>
+                </div>
+                <ul class="selection-tabs">
+                    <li data-tab="tab1">Meter/Ft</li>
+                    <li data-tab="tab2">Liter/Gal</li>
+                    <li data-tab="tab3">Kilo/Lbs</li>
+                </ul>
+                <div class="tab-content" id="tab1">
+                    <!-- This will be populated w/ JavaScript -->
+                </div>
+
+                <div class="tab-content" id="tab2">
+                    <!-- This will be populated w/ JavaScript -->
+                </div>
+
+                <div class="tab-content" id="tab3">
+                    <!-- This will be populated w/ JavaScript -->
+                </div>
+            </div>
+            <div class="bottom-sub-container">
+                <input type="text" maxlength="5" placeholder="Enter measurement..." id="user-input"/>
+                <span id="unit-type"></span>
+                <button id="convert-button">Convert</button>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
