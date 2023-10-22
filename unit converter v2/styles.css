@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --main-purple: #6943FF;
+  --background-gray: #1F2937;
+  --label-gray: #273549;
+  --label-text: #CCC1FF;
+  --regular-text: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto',sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(151deg, rgba(2,0,36,1) 0%, rgba(9,41,121,1) 52%, rgba(0,116,255,1) 100%);
+
+}
+.wrapper {
+  width: 600px;
+  min-width: 400px;
+  background-color: bisque;
+  box-shadow: 0 0 35px rgba(143, 136, 136, 0.1);
+
+}
+.top-container {
+  background-color: var(--main-purple);
+  padding: 10px;
+}
+.top-container h1 {
+  color: var(--regular-text);
+  font-size: 2rem;
+  margin: 25px 0;
+}
+.top-container input {
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: 25px auto;
+  background-color: transparent;
+  border: 1px solid var(--regular-text);
+  color: var(--regular-text);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+}
+#convert-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: var(--label-gray);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+#convert-button:hover {
+  background-color: #273549;
+  color: #fff;
+}
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-gray);
+  padding: 10px;
+}
+.result-box {
+  width: 85%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  background-color: #273549;
+}
+.result-box h3 {
+  color: var(--label-text);
+}
+.result-box p{
+  color: var(--regular-text);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
+  }
+  .wrapper {
+    height: 100vh;
+  }
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 45%;
+  }
+  .bottom-container {
+    height: 55%;
+  }
+}

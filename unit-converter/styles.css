@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;
 }
+
 body {
     height: 100vh;
     display: flex;    
@@ -14,7 +17,10 @@ body {
     background: linear-gradient(151deg, rgba(2,0,36,1) 0%, rgba(9,41,121,1) 52%, rgba(0,116,255,1) 100%);
 }
 
-.wrapper {
+@media screen and (min-width: 800px) {
+    
+    
+    .wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,8 +50,6 @@ body {
     font-size: 14px;
     color: rgb(148, 146, 146)
 }
-
-
 .selection-tabs {
     list-style-type: none;
     width: 100%;
@@ -112,5 +116,35 @@ input {
 #convert-button:hover {
     background-color: rgba(55,55,199,0.5);
 }
+}
+.wrapper {
+    min-width: 90%;
+    min-height: 600px;
+}
+.top-sub-container {
+    min-height: 400px;
+}
+.title-bar h1, .title-bar i{
+    font-size: 4rem;
+}
+.title-bar span {
+    font-size: 2rem;
+}
+.selection-tabs li {
+    font-size: 3rem;
+}
+.tab-content {
+    font-size: 3rem;
+}
 
-
+.bottom-sub-container {
+    min-height: 200px;
+}
+input {
+    min-height:100px;
+    font-size: 3rem;
+}
+#convert-button {
+    min-height: 100px;
+    font-size: 3rem;
+}
