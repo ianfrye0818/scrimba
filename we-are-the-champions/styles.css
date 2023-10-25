@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(151deg, rgba(2,0,36,1) 0%, rgba(7,29,96,1) 32%, rgba(0,31,69,1) 60%, rgba(9,41,121,1) 81%, rgba(9,41,121,1) 96%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.container {
+    text-align: center;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+img {
+    max-width: 200px;
+}
+h1 {
+    margin: 10px;
+}
+textarea,input {
+    width: 100%;
+    background-color: #444059;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 20px;
+    font-size: 18px;
+    margin: 5px 0;
+}
+textarea:focus {
+    border-color: #fff;
+}
+.to-from-inputs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+#publish-button {
+    width: 100%;
+    padding: 20px;
+    background-color: #28a9f1;
+    color: #04131c;
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+#publish-button:hover {
+    background-color: #28abf1b1;
+}
+h3 {
+    font-size: 25px;
+    margin: 10px 0;;
+}
+#endorsement-container {
+    min-width: 100%;
+}
+.endorsement-box {
+    min-width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    text-align: left;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.output-to,.output-from,.output-message {
+    color: #000;
+}
+.output-to,.output-from {
+    font-weight: 700;
+}
+.output-to {
+    margin-bottom: 10px;
+}
+.output-from {
+    margin-top: 10px;
+}
+
+
