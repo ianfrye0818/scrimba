@@ -1,5 +1,5 @@
 /* === Imports === */
-import { initializeApp } from './node_modules/firebase/app';
+import { initializeApp } from '/firebase/app';
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -8,7 +8,7 @@ import {
   onAuthStateChanged,
   GoogleAuthProvider,
   signInWithPopup,
-} from './node_modules/firebase/auth';
+} from '/firebase/auth';
 import {
   getFirestore,
   collection,
