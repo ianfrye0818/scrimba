@@ -22,7 +22,7 @@ import {
   doc,
   updateDoc,
   deleteDoc,
-} from './node_modules/firebase/firestore';
+} from 'firebase/firestore';
 
 /* === Firebase Setup === */
 const firebaseConfig = {
