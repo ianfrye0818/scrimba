@@ -1,0 +1,97 @@
+/* 
+width 375px
+header-section  height 67px
+header-section  bottom border 1px solid #c6c6c6
+post height 545px
+post image 375x375
+logo img 127x33
+icon image 23.3x 22.13
+profile image 34x34
+main font size: 13px */
+
+/* === general selectors === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --line-color: #C6C6C6;
+
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+.user-post {
+  margin-bottom: 25px;
+}
+/* === utility classes === */
+.user-name {
+  font-weight: bold;
+}
+
+/* === section styling === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--line-color);
+}
+.post-user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px
+}
+.name-location {
+  margin-left: 10px;
+}
+.like-counter {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comment-section {
+  display: flex;
+  align-items: center;
+}
+.comment-span {
+  margin-right: 5px;
+}
+
+
+
+/* === images === */
+.avitar {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+}
+.main-image-wrapper {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.main-image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.logo {
+  width: 127px;
+}
+.icon {
+  width: 23px;
+  margin: 0 5px 5px;
+}
+
+
