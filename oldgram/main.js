@@ -72,21 +72,21 @@ function renderIcons(index, likes, likeCounter) {
 
   if (isLiked) {
     heartIcon.setAttribute('data', 'liked');
-    heartIcon.src = '/images/heart-full.svg';
+    heartIcon.src = './images/heart-full.svg';
   } else {
     heartIcon.removeAttribute('data');
-    heartIcon.src = 'images/icon-heart.png';
+    heartIcon.src = './images/icon-heart.png';
   }
 
   heartIcon.addEventListener('click', () => {
     if (heartIcon.hasAttribute('data')) {
       heartIcon.removeAttribute('data');
-      heartIcon.src = '/images/icon-heart.png';
+      heartIcon.src = './images/icon-heart.png';
       likes--;
       likeCounter.textContent = `${likes} likes`;
     } else {
       heartIcon.setAttribute('data', 'liked');
-      heartIcon.src = '/images/heart-full.svg';
+      heartIcon.src = './images/heart-full.svg';
       likes++;
       likeCounter.textContent = `${likes} likes`;
     }
@@ -100,12 +100,12 @@ function renderIcons(index, likes, likeCounter) {
   });
 
   const commentIcon = document.createElement('img');
-  commentIcon.src = 'images/icon-comment.png';
+  commentIcon.src = './images/icon-comment.png';
   commentIcon.alt = 'comment icon';
   commentIcon.className = 'icon';
 
   const dmIcon = document.createElement('img');
-  dmIcon.src = 'images/icon-dm.png';
+  dmIcon.src = './images/icon-dm.png';
   dmIcon.alt = 'dm icon';
   dmIcon.className = 'icon';
 
