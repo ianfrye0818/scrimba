@@ -52,7 +52,7 @@ header {
 .controls-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  max-width: 500px;
   margin: 0px auto;
 }
 
@@ -74,7 +74,7 @@ header {
 
 label {
   font-size: 14px;
-  padding: 3px;
+  padding: 10px;
   width: 100%;
   cursor: pointer;
 }
@@ -156,4 +156,10 @@ input[type='radio'] {
   color: white;
   background-color: #bd301d;
   border: 2px solid #bd301d;
+}
+
+@media screen and (max-width: 768px) {
+  .controls-container {
+    max-width: 95%;
+  }
 }
