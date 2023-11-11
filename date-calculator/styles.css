@@ -1,0 +1,164 @@
+:root {
+  --Light-Red: hsl(0, 100%, 67%);
+  --Main-White: hsl(0, 0%, 100%);
+  --Off-White: hsl(0, 0%, 97%);
+  --Smokey-Grey: hsla(0, 1%, 44%, 0.317);
+  --Off-Black: hsl(0, 0%, 8%);
+  --Main-Purple: hsl(259, 100%, 65%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Off-White);
+}
+
+.container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--Main-White);
+  padding: 30px;
+  border-radius: 20px 20px 75px 20px;
+}
+
+form {
+  width: 95%;
+  display: flex;
+  margin-bottom: 5px;
+  gap: 3%;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--Smokey-Grey);
+  position: relative;
+}
+
+label {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: gray;
+}
+
+.form-item {
+  width: 25%;
+}
+
+.form-item input {
+  color: var(--Off-Black);
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--Smokey-Grey);
+}
+
+.form-item input:focus {
+  border: 1px solid var(--Main-Purple);
+}
+
+button {
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--Main-Purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+  transition: 0.2s;
+}
+
+button:hover,
+button:active {
+  background-color: var(--Off-Black);
+}
+
+button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.result-section {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 65px;
+}
+
+.result-section span {
+  color: var(--Main-Purple);
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: red;
+  border-color: red;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    width: 95%;
+    padding: 3px;
+    align-items: center;
+  }
+
+  form {
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+
+  .form-item {
+    margin-bottom: 30px;
+    flex: 1;
+  }
+
+  .form-item label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .form-item input {
+    padding: 10px;
+    font-size: 32px;
+  }
+
+  button {
+    right: 50%;
+  }
+
+  .result-section {
+    padding: 20px;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}

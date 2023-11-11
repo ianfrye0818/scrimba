@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet" />
+    <title>Date Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-item">
+          <label for="month">Month</label>
+          <input
+            class="input-item"
+            type="text"
+            name="month"
+            id="month"
+            placeholder="MM"
+            maxlength="2" />
+          <div
+            id="error-month"
+            class="error"
+            style="font-style: italic; font-size: 10px"></div>
+        </div>
+        <div class="form-item">
+          <label for="day">Day</label>
+          <input
+            class="input-item"
+            type="text"
+            name="day"
+            id="day"
+            maxlength="2"
+            placeholder="DD" />
+          <div
+            id="error-day"
+            class="error"
+            style="font-style: italic; font-size: 10px"></div>
+        </div>
+        <div class="form-item">
+          <label for="year">Year</label>
+          <input
+            class="input-item"
+            type="text"
+            name="year"
+            id="year"
+            maxlength="4"
+            placeholder="YYYY" />
+          <div
+            id="error-year"
+            class="error"
+            style="font-style: italic; font-size: 10px"></div>
+        </div>
+        <button type="submit" id="submit-btn">
+          <img src="./assets/images/icon-arrow.svg" alt="" />
+        </button>
+      </form>
+      <div class="result-section">
+        <p><span id="years">- -</span> years</p>
+        <p><span id="months">- -</span> months</p>
+        <p><span id="days">- -</span> days</p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
