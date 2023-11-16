@@ -1,0 +1,151 @@
+/* - Mobile: 375px */
+/* - Desktop: 1440px */
+
+:root {
+  --Light-Red: hsl(0, 100%, 67%);
+  --Orangey-Yellow: hsl(39, 100%, 56%);
+  --Green-Teal: hsl(166, 100%, 37%);
+  --Cobalt-Blue: hsl(234, 85%, 45%);
+
+  --Light-Slate-Blue: hsl(252, 100%, 67%);
+  --Light-Royal-Blue: hsl(241, 81%, 54%);
+
+  --Violet-Blue: hsla(256, 72%, 46%, 1);
+  --Persian-Blue: hsla(241, 72%, 46%, 0);
+
+  --Main-White: hsl(0, 0%, 100%);
+  --Pale-Blue: hsl(221, 100%, 96%);
+  --Light-Lavender: hsl(241, 100%, 89%);
+  --Dark-Gray-Blue: hsl(224, 30%, 27%);
+}
+* {
+  font-size: 18px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  /* - Weights: 500, 700, 800 */
+}
+
+.container {
+  max-width: 900px;
+  margin: 150px auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 3px 3px 35px rgba(0, 0, 0, 0.3);
+}
+.results {
+  background: linear-gradient(
+    45deg,
+    var(--Light-Royal-Blue),
+    var(--Light-Slate-Blue)
+  );
+  flex: 1;
+  border-radius: 15px;
+  padding: 55px;
+  text-align: center;
+  color: var(--Main-White);
+}
+
+.results h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+.results h3 {
+  font-size: 2.5rem;
+  margin: 25px auto;
+}
+.results p {
+  margin: 25px auto;
+  opacity: 0.7;
+}
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  margin: 25px auto;
+  border-radius: 50%;
+  background: linear-gradient(var(--Violet-Blue), var(--Light-Royal-Blue));
+  font-size: 4rem;
+  font-weight: bold;
+}
+.score span {
+  font-size: 18px;
+  font-weight: normal;
+}
+.summary {
+  flex: 1;
+  border-radius: 0 15px 15px 0;
+  padding: 25px;
+}
+.summary h2 {
+  font-size: 1.5rem;
+  margin: 25px auto;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.data-card {
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  font-weight: bold;
+}
+.data-card img {
+  margin-right: 10px;
+}
+.data-card span {
+  margin-left: auto;
+  color: var(--Dark-Gray-Blue);
+}
+#continue-button {
+  padding: 15px;
+  border-radius: 30px;
+  background: var(--Dark-Gray-Blue);
+  color: var(--Main-White);
+  margin: 25px auto;
+  width: 85%;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+#continue-button:hover {
+  background-color: var(--Light-Royal-Blue);
+}
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.111);
+  color: hsl(0, 100%, 67%);
+}
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.111);
+  color: hsl(39, 100%, 56%);
+}
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.111);
+  color: hsl(166, 100%, 37%);
+}
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.111);
+  color: hsl(234, 85%, 45%);
+}
+@media screen and (max-width: 680px) {
+  .container {
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  .results {
+    border-radius: 0;
+    padding: 25px;
+  }
+}

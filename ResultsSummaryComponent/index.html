@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>FrontEnd Mentor | Results Summary Component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="results">
+          <h1>Your Result</h1>
+          <div class="score">76<span>of 100</span></div>
+          <h3>Great</h3>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="summary">
+          <h2>Summary</h2>
+          <div class="data" id="data"></div>
+          <button id="continue-button">Continue</button>
+        </div>
+      </div>
+    </main>
+    <script type="module">
+      import { categories } from './data.js';
+      const dataEl = document.getElementById('data');
+      let divData = ``;
+      categories.forEach((item) => {
+        console.log(item.category);
+        divData += `
+          <div class="data-card ${item.category.toLowerCase()}">
+            <img src="${item.icon}" alt="icon" />
+            ${item.category} <span>${item.score} / 100</span>
+          </div>
+          `;
+      });
+      dataEl.innerHTML = divData;
+    </script>
+  </body>
+</html>
