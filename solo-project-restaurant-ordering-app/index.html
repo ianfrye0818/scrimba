@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Solo Project - Restaurant Ordering App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Jimmy's Diner</h1>
+        <h2>The best burgers and pizzas in town.</h2>
+      </header>
+      <main>
+        <div id="product-menu"></div>
+        <div id="order" class="hidden">
+          <h3>Your Order</h3>
+          <div id="order-card-container" class="order-card-container"></div>
+          <input
+            id="discount-input"
+            type="text"
+            placeholder="Discount Code"
+          /><button id="discount-btn">Apply Discount</button>
+          <p class="total-price">Total Price: <span id="total-price"></span></p>
+          <button id="complete-order-button">Complete Order</button>
+        </div>
+      </main>
+      <div class="order-complete hidden">
+        <div class="thank-you">
+          <h2>Thanks, James! Your order is on the way</h2>
+        </div>
+        <div id="starContainer">
+          <p>Please Rate your order</p>
+          <span class="star" data-rating="1">&#9733;</span>
+          <span class="star" data-rating="2">&#9733;</span>
+          <span class="star" data-rating="3">&#9733;</span>
+          <span class="star" data-rating="4">&#9733;</span>
+          <span class="star" data-rating="5">&#9733;</span>
+        </div>
+      </div>
+
+      <div id="modal" class="modal hidden">
+        <div class="modal-card">
+          <div id="close-modal-button">X</div>
+          <h2>Enter Card Details</h2>
+          <form>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+            <input
+              type="text"
+              name="CardNumber"
+              id="cardNumber"
+              placeholder="Enter card number"
+              required
+              maxlength="16"
+            />
+            <input
+              type="password"
+              name="CCV"
+              id="CCV"
+              placeholder="Enter CVV"
+              maxlength="3"
+              required
+            />
+            <button type="submit" id="pay-btn">Pay</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
