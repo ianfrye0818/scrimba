@@ -116,6 +116,13 @@ function handlePayment() {
     document.querySelector('#order').classList.add('hidden');
     localStorage.clear();
     itemsOrdered = [];
+    document
+      .querySelectorAll('.modal-card input')
+      .forEach((input) => (input.value = ''));
+    const stars = document.querySelectorAll('.star');
+    stars.forEach((star) => {
+      star.classList.remove('filled');
+    });
   }, 1500);
 }
 
