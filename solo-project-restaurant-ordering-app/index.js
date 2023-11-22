@@ -123,6 +123,8 @@ function handlePayment() {
     stars.forEach((star) => {
       star.classList.remove('filled');
     });
+    discount = false;
+    document.querySelector('#discount-input').value = '';
   }, 1500);
 }
 
