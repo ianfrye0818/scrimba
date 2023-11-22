@@ -52,7 +52,7 @@ document.addEventListener('click', (e) => {
 
 //handling event listeners
 function handleAddItemToCart(itemId) {
-  document.getElementById('order-complete').classList.add('hidden');
+  document.querySelector('.order-complete').classList.add('hidden');
   const existingItemIndex = itemsOrdered.findIndex(
     (item) => item.id === Number(itemId)
   );
