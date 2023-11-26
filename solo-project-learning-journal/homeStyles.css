@@ -32,3 +32,10 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: center;
+    padding: 25px;
+  }
+}
