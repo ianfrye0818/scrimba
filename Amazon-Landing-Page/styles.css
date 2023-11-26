@@ -15,7 +15,7 @@ body {
   background-color: #fffcf2;
 }
 a {
-  color: 007185;
+  color: #007185;
   text-decoration: none;
 }
 a:hover {
@@ -31,7 +31,7 @@ a:hover {
   background-color: #ccc5b9;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,.8);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .left-side {
   text-align: center;
@@ -50,7 +50,6 @@ img {
   font-size: 12px;
   color: 565959;
 }
-
 
 @media screen and (max-width: 850px) {
   body {
