@@ -1,0 +1,34 @@
+.hero {
+  min-height: 488px;
+  background-image: url('./images/blog-image-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 60px;
+  display: flex;
+  margin-bottom: 50px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.hero .blog-post-card {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+}
+
+#view-more {
+  display: block;
+  width: max-content;
+  margin: 30px auto;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #090909;
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
