@@ -78,13 +78,13 @@ button {
   form {
     flex-direction: column;
   }
-  #color-picker,
   select,
   button {
     width: 100%;
   }
   #color-picker {
     height: 50px;
+    width: 50px;
   }
   .color-grid {
     grid-template-columns: 1fr;
