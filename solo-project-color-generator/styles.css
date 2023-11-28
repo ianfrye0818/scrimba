@@ -16,10 +16,13 @@ form {
   justify-content: space-evenly;
   gap: 15px;
 }
-/* #color-picker {
-  visibility: hidden;
-  z-index: 22;
-} */
+#color-picker {
+  flex: 1;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 #color-picker-label {
   background-color: black;
   flex: 1;
@@ -81,10 +84,10 @@ button {
     width: 100%;
   }
 
-  #color-picker-label,
+/*   #color-picker-label,
   #color-picker {
     height: 40px;
-  }
+  } */
   .color-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: 100px, max-content;
