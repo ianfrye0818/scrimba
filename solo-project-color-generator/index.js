@@ -1,11 +1,6 @@
-const form = document.getElementById('color-form');
-const colorPicker = document.getElementById('color-picker');
-const palletType = document.getElementById('pallet-type');
-const colorGrid = document.querySelector('.color-grid');
-// const colorLabel = document.getElementById('color-picker-label');
 
 //event listners
-form.addEventListener('submit', (e) => {
+document.getElementById('color-form').addEventListener('submit', (e) => {
   e.preventDefault();
   fetchColorPallet();
 });
@@ -15,11 +10,11 @@ document.addEventListener('click', (e) => {
     createMousePopup(e);
   }
 });
-// colorPicker.addEventListener('change', () => {
-//   colorLabel.style.backgroundColor = colorPicker.value;
-// });
 
+//fetch colors and render on page functions
 function fetchColorPallet() {
+  const colorPicker = document.getElementById('color-picker');
+  const palletType = document.getElementById('pallet-type');
   const url = `https://www.thecolorapi.com/scheme?hex=${colorPicker.value.slice(
     1
   )}&mode=${palletType.value}&count=6`;
@@ -41,7 +36,7 @@ function fetchColorPallet() {
     .catch((error) => console.log(error));
 }
 function render(data) {
-  colorGrid.innerHTML = data.colors
+  document.querySelector('.color-grid').innerHTML = data.colors
     .map((color) => {
       return `
     <div class="color" style="background-color: ${color.hex.value}" data-color="${color.hex.value}"></div>
@@ -50,6 +45,8 @@ function render(data) {
     })
     .join('');
 }
+
+//copy to clipboard functions
 function copyColor(targetID) {
   const textArea = document.createElement('textarea');
   textArea.value = targetID;
