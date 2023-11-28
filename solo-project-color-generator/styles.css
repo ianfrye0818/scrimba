@@ -44,6 +44,7 @@ button {
   padding: 15px;
   border: 1px solid #bbb;
   background-color: transparent;
+  color: #0e0e0e;
 }
 .color-grid {
   max-width: 1024px;
