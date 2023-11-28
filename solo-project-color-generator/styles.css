@@ -18,12 +18,12 @@ form {
 }
 #color-picker {
   visibility: hidden;
+  z-index: 22;
 }
 #color-picker-label {
   background-color: black;
   flex: 1;
   height: 50px;
-  z-index: 100;
   border: none;
   outline: none;
   cursor: pointer;
