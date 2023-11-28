@@ -78,8 +78,6 @@ button {
   form {
     flex-direction: column;
   }
-/*   #color-picker-label,
-  #color-picker, */
   select,
   button {
     width: 100%;
