@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Color Generator</title>
+  </head>
+  <body>
+    <form id="color-form">
+      <label id="color-picker-label">
+        <input type="color" name="color-picker" id="color-picker" />
+      </label>
+      <select name="pallet-type" id="pallet-type">
+        <option value="monochrome">Monochrome</option>
+        <option value="monochrome-dark">Monochrome-Dark</option>
+        <option value="monochrome-light">Monochrome-Light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-Complement</option>
+        <option value="triad">Triad</option>
+      </select>
+      <button type="submit">Get Color Schema</button>
+    </form>
+    <div class="color-grid"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
