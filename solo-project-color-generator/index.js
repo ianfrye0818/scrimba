@@ -2,7 +2,7 @@ const form = document.getElementById('color-form');
 const colorPicker = document.getElementById('color-picker');
 const palletType = document.getElementById('pallet-type');
 const colorGrid = document.querySelector('.color-grid');
-const colorLabel = document.getElementById('color-picker-label');
+// const colorLabel = document.getElementById('color-picker-label');
 
 //event listners
 form.addEventListener('submit', (e) => {
@@ -15,9 +15,9 @@ document.addEventListener('click', (e) => {
     createMousePopup(e);
   }
 });
-colorPicker.addEventListener('change', () => {
-  colorLabel.style.backgroundColor = colorPicker.value;
-});
+// colorPicker.addEventListener('change', () => {
+//   colorLabel.style.backgroundColor = colorPicker.value;
+// });
 
 function fetchColorPallet() {
   const url = `https://www.thecolorapi.com/scheme?hex=${colorPicker.value.slice(
