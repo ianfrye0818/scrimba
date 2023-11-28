@@ -83,11 +83,10 @@ button {
   button {
     width: 100%;
   }
-
-/*   #color-picker-label,
   #color-picker {
-    height: 40px;
-  } */
+    height: 50px;
+    width: 50px;
+  }
   .color-grid {
     grid-template-columns: 1fr;
     grid-auto-rows: 100px, max-content;
