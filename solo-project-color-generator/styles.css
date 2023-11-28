@@ -16,10 +16,10 @@ form {
   justify-content: space-evenly;
   gap: 15px;
 }
-#color-picker {
+/* #color-picker {
   visibility: hidden;
   z-index: 22;
-}
+} */
 #color-picker-label {
   background-color: black;
   flex: 1;
