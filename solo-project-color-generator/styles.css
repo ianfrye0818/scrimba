@@ -45,6 +45,7 @@ button {
   border: 1px solid #bbb;
   background-color: transparent;
   color: #0e0e0e;
+  cursor: pointer;
 }
 .color-grid {
   max-width: 1024px;
