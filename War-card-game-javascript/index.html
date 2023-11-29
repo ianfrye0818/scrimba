@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>War Card Game</title>
+  </head>
+  <body>
+    <!-- new deck and cards remainging container -->
+    <div class="top-container">
+      <button id="getNewDeck">New Deck</button>
+      <p>Remaining cards: <span id="remainingCards">0</span></p>
+    </div>
+
+    <div class="container">
+      <div class="card-div computer-score-div">
+        <img
+          id="computerCard"
+          class="card"
+          src="./images/cardback.svg"
+          alt="players card"
+        />
+        <h2>
+          Computer Score: <span class="score" id="computerScoreEl">0</span>
+        </h2>
+      </div>
+      <span class="war">WAR</span>
+
+      <div class="card-div playe-score-div">
+        <img
+          id="playerCard"
+          class="card"
+          src="./images/cardback.svg"
+          alt="players card"
+        />
+        <h2>My Score: <span class="score" id="playerScoreEl">0</span></h2>
+      </div>
+    </div>
+    <button class="draw-card" id="startGame" onclick="handleStartNewGame()">
+      Start Game
+    </button>
+    <button class="draw-card hidden" id="drawCard">Draw</button>
+
+    <!-- Game over modal -->
+    <div id="game-over-modal" class="game-over-modal hidden">
+      <h1><span id="wonGame"></span><br />won the game!</h1>
+      <div id="finalScore"></div>
+      <button id="startNewGame">Play Again?</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

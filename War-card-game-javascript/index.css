@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Slackey&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('./images/table.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1084px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.top-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background-color: #ffef2c;
+  padding: 5px 15px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+.draw-card {
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.war {
+  display: block;
+  font-family: 'Slackey', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffef2c;
+}
+
+.card {
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.score {
+  display: block;
+}
+
+.game-over-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.game-over-modal h1,
+.game-over-modal span,
+.game-over-modal div {
+  color: #000;
+  text-align: center;
+}
+
+#startNewGame {
+  width: 100%;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: auto;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .war {
+    display: none;
+  }
+
+  .top-container {
+    position: static;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .computer-score-div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  .score {
+    display: inline-block;
+  }
+}
