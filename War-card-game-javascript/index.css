@@ -9,7 +9,7 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   padding-top: 25px;
   display: flex;
   flex-direction: column;
@@ -121,32 +121,22 @@ h2 {
 
 @media screen and (max-width: 600px) {
   body {
-    height: auto;
-    justify-content: space-between;
     padding: 0;
   }
 
-  .container {
-    flex-direction: column;
+  .container img {
+    scale: 0.75;
   }
-
   .war {
     display: none;
   }
-
   .top-container {
     position: static;
     margin: 0 auto;
-    justify-content: space-between;
-    padding: 5px;
   }
-
-  .computer-score-div {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 10px;
+  h2 {
+    font-size: 1rem;
   }
-
   .score {
     display: inline-block;
   }
