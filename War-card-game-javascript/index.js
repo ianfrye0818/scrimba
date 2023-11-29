@@ -116,8 +116,8 @@ function resetGame() {
   computerScore = 0;
   playerScore = 0;
   document.getElementById('startGame').classList.add('hidden');
-  playerCard.src = './images/cardback.svg';
-  computerCard.src = './images/cardback.svg';
+  playerCard.src = 'https://deckofcardsapi.com/static/img/back.png';
+  computerCard.src = 'https://deckofcardsapi.com/static/img/back.png';
 }
 function checkAndUpdateScore(data) {
   const playerRoundScore = cardDeckValues.indexOf(data.cards[0].value);
