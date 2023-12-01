@@ -37,6 +37,7 @@ body {
   padding: 1em 2em;
   border-radius: 5px;
   border-radius: 10px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
 }
 
 .countdown-display {
@@ -60,5 +61,8 @@ body {
   body {
     height: auto;
     background-color: #c7375f;
+  }
+  .container {
+    box-shadow: none;
   }
 }
