@@ -1,56 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --wine-red: #C7375F;
-  --bright-red: #D42D2F;
-  --dark-green: #344D2F;
-  --light-green: #77A047;
-  --gold: #FAC57D;
-  --snow: #F0F4F7;
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    color: var(--dark-green);
-    background-color: var(--light-green);
-    font-family: 'Roboto',sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: var(--dark-green);
+  background-color: var(--light-green);
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    background: var(--wine-red);
-    color: var(--snow);
-    padding: 1em 2em;
-    border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: var(--wine-red);
+  color: var(--snow);
+  padding: 1em 2em;
+  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .countdown-display {
-    font-size: 2.5rem;
-    
+  font-size: 2.5rem;
 }
 .date {
-    padding: 15px
+  padding: 15px;
 }
 
 #datepicker {
-    padding: 10px 15px;
-    border: none;
-    background-color: var(--dark-green);
-    color: white;
-    cursor: pointer;
-    margin-left: 10px;
-    text-align: center;
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--dark-green);
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+    background-color: #c7375f;
+  }
 }
