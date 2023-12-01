@@ -1,8 +1,11 @@
-const countdownDisplay = document.getElementById("countdown-display");
+const countdownDisplay = document.getElementById('countdown-display');
 
 function renderCountdown() {
   const dateString = document.getElementById('datepicker').value.split('/');
-  const futureDate = new Date(`${dateString[2]}-${dateString[0]}-${dateString[1]}`);
+  const futureDate = new Date(
+    `${dateString[2]}-${dateString[0]}-${dateString[1]}T00:00:00`
+  );
+
   const currentDate = new Date();
   const timeStamp = futureDate - currentDate;
 
@@ -12,9 +15,10 @@ function renderCountdown() {
   const minutes = Math.floor((milliseconds / 60) % 60);
   const hours = Math.floor((milliseconds / 3600) % 24);
   const days = Math.floor((milliseconds / (24 * 3600)) % 30.44);
-  const months = Math.floor((milliseconds / (24 * 3600)) / 30.44);
+  const months = Math.floor(milliseconds / (24 * 3600) / 30.44);
 
-  const addLeadingZero = (number) => (number < 10 ? `0${number}` : number);
+  const addLeadingZero = (number) =>
+    number < 10 && number >= 0 ? `0${number}` : `${number}`;
 
   countdownDisplay.innerHTML = `
     ${months > 0 ? `<p>${months} months</p>` : ''}

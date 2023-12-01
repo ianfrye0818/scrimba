@@ -25,6 +25,7 @@ body {
   color: var(--dark-green);
   background-color: var(--light-green);
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 .container {
