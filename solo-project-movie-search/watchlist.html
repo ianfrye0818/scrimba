@@ -20,27 +20,19 @@
         <a href="./index.html">Search for Movies</a>
       </div>
     </header>
-    <div class="form-container">
-      <form id="search-form">
-        <img src="./images/icons/Search.svg" alt="Magnifine glass Icon" />
-        <input
-          type="text"
-          name="search-box"
-          id="search-box"
-          required
-          placeholder="Blade Runner"
-        />
-        <button type="submit" id="search-button">Search</button>
-      </form>
-    </div>
-    <main>
-      <div id="watch-list-container" class="search-results">
-        <!-- Start Search result card -->
 
-        <!-- end search result card -->
+    <div class="modal" id="confirmationModal">
+      <div class="modal-content">
+        <p>Are you sure you want to remove this item?</p>
+        <button id="confirmButton">Yes</button>
+        <button id="cancelButton">No</button>
       </div>
+    </div>
+
+    <main>
+      <div id="watch-list-container" class="search-results"></div>
     </main>
 
-    <script type="module" src="index.js"></script>
+    <script type="module" src="watchlist.js"></script>
   </body>
 </html>
