@@ -1,5 +1,5 @@
 const API_KEY = '419e0663';
-const OPEN_MOVIE_BASE_URL = 'http://www.omdbapi.com/';
+const OPEN_MOVIE_BASE_URL = 'https://www.omdbapi.com/';
 
 //Function for getting the results of all the movies that match that title and extracting their id's to pass to the getMovieDetails Array Function
 async function getMovieArray(title) {
