@@ -1,3 +1,5 @@
+import { getMoviePosterUrl, getMovieRating } from './utils.js';
+
 export function renderWatchListCards(watchListArray) {
   const watchListContainer = document.querySelector('#watch-list-container');
 
@@ -38,16 +40,4 @@ export function renderWatchListCards(watchListArray) {
       )
       .join('');
   }
-}
-
-function getMoviePosterUrl(poster) {
-  return !poster || poster.length < 5
-    ? './images/icons/movie-film-icon.svg'
-    : poster;
-}
-
-function getMovieRating(ratings) {
-  return ratings && ratings.length > 0
-    ? `<i class="fa-solid fa-star"></i> ${ratings[0].Value.slice(0, 3)}`
-    : '';
 }

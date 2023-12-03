@@ -1,3 +1,9 @@
+import {
+  getMoviePosterUrl,
+  getMovieRating,
+  getWatchlistButtonContent,
+} from './utils.js';
+
 export function renderSearchResultCards(movieDetailsArray) {
   const searchResultsContainer = document.querySelector(
     '#search-results-container'
@@ -47,22 +53,4 @@ export function renderSearchResultCards(movieDetailsArray) {
   `
     )
     .join('');
-
-  function getMoviePosterUrl(poster) {
-    return !poster || poster.length < 5
-      ? './images/icons/movie-film-icon.svg'
-      : poster;
-  }
-
-  function getMovieRating(ratings) {
-    return ratings && ratings.length > 0
-      ? `<i class="fa-solid fa-star"></i> ${ratings[0].Value.slice(0, 3)}`
-      : '';
-  }
-
-  function getWatchlistButtonContent(isInWatchList) {
-    return isInWatchList
-      ? '<i class="fa-solid fa-circle-minus"></i> Remove'
-      : '<i class="fa-solid fa-circle-plus"></i> Watchlist';
-  }
 }

@@ -8,9 +8,6 @@ import {
 import { renderSearchResultCards } from './renderSearchCards.js';
 
 //HTML elements from file
-const searchResultsContainer = document.querySelector(
-  '#search-results-container'
-);
 const movieString = document.querySelector('#search-box');
 const form = document.querySelector('#search-form');
 
@@ -18,7 +15,7 @@ const form = document.querySelector('#search-form');
 let watchListArray = JSON.parse(localStorage.getItem('watchList')) || [];
 let movieDetailsArray = [];
 
-//event listeners
+//event listener for form submission
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (movieString.value) {
@@ -34,6 +31,7 @@ form.addEventListener('submit', async (e) => {
   }
 });
 
+//event listener for the add/remove buttons
 document.addEventListener('click', (e) => {
   const target = e.target;
 
@@ -47,6 +45,7 @@ document.addEventListener('click', (e) => {
       } else {
         addToWatchList(movie, watchListArray);
       }
+
       toggleButtonText(target, watchListArray);
     }
   }
