@@ -25,6 +25,7 @@ a:visited {
 
 .heart {
   height: 12px;
+  font-size: 12px;
 }
 
 header .flex a {
@@ -151,6 +152,7 @@ input {
 .header-logo {
   height: 18px;
   margin-bottom: -1.5px;
+  font-size: 18px;
 }
 
 .header-link {

@@ -2,7 +2,7 @@ export default function Story(story) {
   return `
     <div class="story">
       <div> 
-        <span class="gray">${story.index || ""}</span>
+        <span class="gray">${story.index || ''}</span>
         <span class="upvote">▲</span>
         <a href="${story.url}">${story.title}</a>
         <span>(${story.domain})</span>
@@ -16,8 +16,8 @@ export default function Story(story) {
           </a>
           |
           <span class="favorite" data-story='${JSON.stringify(story)}'>
-            <img class="heart" src="https://icon.now.sh/heart/ccc">
-            ${story.isFavorite ? "Remove From Favorites" : "Add To Favorites"}
+            <i class="fa-solid fa-heart"></i>
+            ${story.isFavorite ? 'Remove From Favorites' : 'Add To Favorites'}
           </span>
         </div>
       </div>
