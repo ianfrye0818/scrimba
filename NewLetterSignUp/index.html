@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" role="HTML">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>News Letter Sign-up Form</title>
+  </head>
+  <body>
+    <!-- Sign up form section -->
+
+    <div class="signup-container" id="signup-container">
+      <div class="signup-container-left">
+        <h1 role="Heading">Stay updated!</h1>
+        <p role="Paragraph">
+          Join the 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul role="List">
+          <li>
+            <img src="./assets/images/icon-list.svg" class="icon" alt="icon" />
+            Product Discovery and building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" class="icon" alt="icon" />
+            Measuring to ensure updates are a success
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" class="icon" alt="icon" />
+            And much more!
+          </li>
+        </ul>
+
+        <label for="email" role="Label">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email@company.com"
+          required
+          role="Input"
+        />
+        <button id="subscribe-btn">Subscribe to monthly newsletter</button>
+      </div>
+      <div class="signup-container-right" role="container">
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="Illistration"
+        />
+      </div>
+    </div>
+
+    <!-- Thank you message section -->
+
+    <div class="thank-you-container hidden" id="thank-you-container">
+      <img
+        src="./assets/images/icon-success.svg"
+        class="icon-large"
+        alt="large icon"
+      />
+      <h1>Thanks for Subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span id="emailEl">ian@gmail.com</span>. Please click the button inside
+        to confirm your sumbscription
+      </p>
+      <button class="dismiss-btn" id="dismiss-btn">Dismiss message</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

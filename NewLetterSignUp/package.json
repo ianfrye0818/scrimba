@@ -1,0 +1,13 @@
+{
+  "name": "News Letter Sign Up",
+  "version": "1.0.0",
+  "description": "Sign up form to be emailed a newsletter",
+  "main": "index.js",
+  "Type": "Module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ian Frye",
+  "license": "MIT"
+}
