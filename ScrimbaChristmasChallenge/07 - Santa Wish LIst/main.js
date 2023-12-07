@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 const wishListTitleInput = document.getElementById('wishListTitle');
 const wishListLinkInput = document.getElementById('wishListLink');
+const wishListTextInput = document.getElementById('wishListText');
 
 let wishList = JSON.parse(localStorage.getItem('wishList')) || [];
 //event listeners
@@ -19,17 +20,24 @@ document.addEventListener('keydown', (e) => {
 //add an item to list
 function addItemToList() {
   const wishListTitle = wishListTitleInput.value;
+  const wishListText = wishListTextInput.value;
   let wishListLink = wishListLinkInput.value;
-  if (!wishListTitle || !wishListLink) {
+  if (!wishListTitle || !wishListLink || !wishListText) {
     return;
   } else {
     wishListLink = wishListLink.startsWith('https://')
       ? wishListLink
       : 'https://' + wishListLink;
-    wishList.push({ id: uuidv4(), title: wishListTitle, link: wishListLink });
+    wishList.push({
+      id: uuidv4(),
+      title: wishListTitle,
+      link: wishListLink,
+      text: wishListText,
+    });
     localStorage.setItem('wishList', JSON.stringify(wishList));
     wishListTitleInput.value = '';
     wishListLinkInput.value = '';
+    wishListTextInput.value = '';
     renderWishList();
   }
 }
@@ -59,6 +67,7 @@ function renderWishList() {
         />
         <div class="card-body">
           <h5 class="card-title">${listItem.title}</h5>
+          <p class="card-text">${listItem.text}</p>
           <a
             href="${listItem.link}"
             target="_blank"
