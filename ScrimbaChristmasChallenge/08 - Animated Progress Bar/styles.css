@@ -108,17 +108,11 @@ h1 {
 }
 
 @media (max-width: 800px) {
-  body {
-    align-items: flex-start;
-    background: rgb(15, 3, 122);
-    background: linear-gradient(
-      311deg,
-      rgba(15, 3, 122, 1) 5%,
-      rgba(15, 2, 60, 1) 57%
-    );
-  }
   .container {
-    background-color: transparent;
-    box-shadow: none;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .progress-container {
+    width: 75%;
   }
 }
