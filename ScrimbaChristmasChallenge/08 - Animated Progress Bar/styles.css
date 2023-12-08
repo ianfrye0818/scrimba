@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  height: 100dvh;
+  background: rgb(238, 90, 36);
+  background: radial-gradient(
+    circle,
+    rgba(238, 90, 36, 1) 0%,
+    rgba(234, 32, 39, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: green;
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 45px;
+  position: relative;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.progress-bar {
+  height: 85%;
+  width: 0;
+  background-color: #4caf50; /* Initial color */
+  position: absolute;
+  animation: progressAnimation 6s infinite;
+}
+
+.loading-dots {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: loadingAnimation 1s infinite;
+}
+h1 {
+  display: flex;
+  align-items: baseline;
+}
+.loading-dots::after {
+  content: '...';
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  width: 0;
+  animation: loadingTextAnimation 1s infinite;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+    background-color: #cc231e;
+  }
+  25% {
+    width: 25%;
+    background-color: #f5624d;
+  }
+  50% {
+    width: 50%;
+    background-color: #34a65f;
+  }
+  75% {
+    width: 75%;
+    background-color: #0f8a5f;
+  }
+  100% {
+    width: 95%;
+    background-color: #235e6f;
+  }
+}
+
+@keyframes loadingTextAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    align-items: flex-start;
+    background: rgb(15, 3, 122);
+    background: linear-gradient(
+      311deg,
+      rgba(15, 3, 122, 1) 5%,
+      rgba(15, 2, 60, 1) 57%
+    );
+  }
+  .container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
