@@ -80,17 +80,21 @@ h1 {
     width: 0;
     background-color: #cc231e;
   }
-  25% {
+  15% {
     width: 25%;
     background-color: #f5624d;
   }
-  50% {
+  35% {
     width: 50%;
     background-color: #34a65f;
   }
-  75% {
+  55% {
     width: 75%;
     background-color: #0f8a5f;
+  }
+  75% {
+    width: 95%;
+    background-color: #235e6f;
   }
   100% {
     width: 95%;
