@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background-image: url('/xmas-bg.png');
+  background-image: url('./images/xmas-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
