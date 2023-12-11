@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02010a;
+}
+
+.swiss-flag {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #ff0000;
+}
+
+.cross {
+  position: absolute;
+  width: 75%;
+  height: 20%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cross.horizontal {
+  width: 20%;
+  height: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
