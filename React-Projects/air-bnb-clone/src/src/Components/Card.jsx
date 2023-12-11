@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import { FaStar } from 'react-icons/fa';
 
 const Card = ({ data }) => {
@@ -14,7 +13,7 @@ const Card = ({ data }) => {
   return (
     <div className="card">
       <img
-        src={`/src/assets/images/${coverImg}`}
+        src={`${import.meta.env.BASE_URL}assets/images/${coverImg}`}
         alt="A photo of someone having fun on vacation"
       />
       <div className="card-top-section">
