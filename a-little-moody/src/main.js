@@ -168,7 +168,9 @@ async function addPostToDB(postBody, user) {
     const docRef = await addDoc(collection(db, collectionName), {
       body: postBody,
       uuid: user.uid,
-      userFirstName: user.displayName.split(' ')[0],
+      userFirstName: user.displayName
+        ? user.displayName.split(' ')[0]
+        : 'Unknown',
       createdAt: Timestamp.fromDate(new Date()),
       mood: moodState,
     });
