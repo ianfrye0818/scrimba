@@ -1,0 +1,121 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+/* Global styles */
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 300;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* navbar component */
+.navbar {
+  min-height: 60px;
+  padding: 25px;
+  background-color: #f55a5a;
+}
+
+.navbar {
+  font-size: 1.75rem;
+  color: #fff;
+}
+.navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* travel card component */
+.card {
+  display: flex;
+  margin-top: 25px;
+  gap: 15px;
+  padding: 10px 10px 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.card:last-child {
+  border: none;
+}
+.card--img-container {
+  width: 25%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.card--img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card--right-section {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.card--right-section__top-line {
+  order: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card--right-sesction__top-line__location {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.location--icon {
+  color: #f55a5a;
+}
+
+.card--right-section__title-line {
+  order: 1;
+  margin-bottom: 20px;
+}
+
+.card--right-section__date-line {
+  order: 2;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card--right-section__description-line {
+  order: 3;
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+@media screen and (max-width: 750px) {
+  .card--img-container {
+    display: none;
+  }
+  .card--right-section {
+    width: 100%;
+  }
+  .card--right-section__title-line {
+    order: 0;
+    margin-bottom: 8px;
+  }
+  .card--right-section__top-line {
+    flex-direction: column;
+    gap: 5px;
+    order: 1;
+    margin-bottom: 15px;
+  }
+}
