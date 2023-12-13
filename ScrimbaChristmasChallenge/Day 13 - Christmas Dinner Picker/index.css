@@ -1,0 +1,140 @@
+:root {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77a047;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  color: var(--snow);
+  background-color: var(--wine-red);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+form input,
+form button,
+.result {
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 5px;
+  border: none;
+}
+
+form {
+  width: 100%;
+  padding: 0.5em 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+form * {
+  padding: 0.5em;
+  font-size: 1.3rem;
+}
+
+label {
+  padding: 0;
+}
+
+input {
+  background: var(--snow);
+  color: var(--dark-green);
+}
+
+.veggie {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.veggie > input {
+  margin-right: 10px;
+}
+
+.result {
+  margin-top: 15px;
+  color: var(--wine-red);
+  min-width: 270px;
+  min-height: 200px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: var(--snow);
+  padding: 1em;
+  font-size: 1.5rem;
+}
+.result li {
+  margin-left: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+.result span {
+  color: var(--dark-green);
+  font-weight: 900;
+}
+
+button {
+  color: var(--dark-green);
+  background: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 0 8px;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 650px) {
+  body {
+    justify-content: flex-start;
+    padding-top: 25px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  .result {
+    font-size: 1rem;
+  }
+  .result li {
+    margin-bottom: 0.25em;
+  }
+}
