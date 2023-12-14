@@ -26,7 +26,7 @@ function duplicateElf() {
 }
 
 function removeElf() {
-  elfCount -= 1; // Decrement first
+  elfCount -= 1;
   elf.textContent = elf.textContent.slice(0, -2);
   elfCountEl.textContent = elfCount;
 
