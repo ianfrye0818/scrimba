@@ -1,0 +1,128 @@
+/* Reset styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+/* Body styles */
+body {
+   padding: 25px;
+   min-height: 100vh;
+   display: flex;
+   background-color: #f0f0f0;
+}
+
+/* Main container styles */
+main {
+   width: 100%;
+   max-width: 800px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0 auto;
+   gap: 25px;
+}
+
+/* Form input styles */
+input[type='text'] {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   width: 100%;
+   text-indent: 10px;
+}
+
+/* Checkbox styles */
+input[type='checkbox'] {
+   cursor: pointer;
+}
+
+/* Todo label styles */
+.todo label {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   cursor: pointer;
+}
+
+/* Button styles */
+button {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #f0f0f0;
+   cursor: pointer;
+   min-width: fit-content;
+}
+
+/* List styles */
+ul {
+   list-style-type: none;
+   padding: 0;
+}
+
+/* Form container styles */
+form {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+/* Todo container styles */
+.todo-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   width: 100%;
+}
+
+/* Todo list container styles */
+#todo-list {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+/* Todo item styles */
+.todo {
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   justify-content: space-between;
+}
+
+/* Checked todo label styles */
+label.checked {
+   text-decoration: line-through;
+}
+
+/* Checked todo item styles */
+.todo.checked {
+   background-color: aqua;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+   main {
+      padding: 0 25px;
+   }
+
+   form {
+      flex-direction: column;
+   }
+
+   form button {
+      width: 100%;
+   }
+}
