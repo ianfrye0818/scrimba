@@ -109,7 +109,7 @@ label.checked {
 
 /* Checked todo item styles */
 .todo.checked {
-   background-color: aqua;
+   background-color: rgb(218, 195, 243);
 }
 
 /* Media query for smaller screens */
