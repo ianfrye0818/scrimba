@@ -12,7 +12,7 @@ function updateLocalStorage() {
 
 //event listeners
 //add event listener to add button
-form.addEventListener('click', (e) => createToDo(e));
+form.addEventListener('click', (e) => createTodo(e));
 clearButton.addEventListener('click', clearTodos);
 
 todoList.addEventListener('click', (e) => {
@@ -22,13 +22,12 @@ todoList.addEventListener('click', (e) => {
    }
 
    if (target.classList.contains('delete-button')) {
-      deleteTodos(target);
+      deleteTodo(target);
    }
 });
 
 //event actions
-
-function createToDo(e) {
+function createTodo(e) {
    e.preventDefault();
    const todoText = todoInput.value.trim();
    if (todoText) {
@@ -42,7 +41,7 @@ function createToDo(e) {
       updateLocalStorage();
    }
 }
-function deleteTodos(target) {
+function deleteTodo(target) {
    const todoId = target.getAttribute('data-id');
    todos = todos.filter((todo) => todo.id != todoId);
    renderTodos();
