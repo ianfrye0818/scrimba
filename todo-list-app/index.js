@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
 const todoList = document.getElementById('todo-list');
 const todoInput = document.getElementById('todo-input');
 const form = document.querySelector('form');
@@ -11,14 +13,13 @@ function updateLocalStorage() {
 }
 
 //event listeners
-//add event listener to add button
-form.addEventListener('click', (e) => createTodo(e));
-clearButton.addEventListener('click', clearTodos);
+form.addEventListener('submit', (e) => createTodo(e));
+clearButton.addEventListener('click', clearAllToDos);
 
 todoList.addEventListener('click', (e) => {
    const target = e.target;
    if (target.classList.contains('checkbox')) {
-      checkTodos(target);
+      completeToDo(target);
    }
 
    if (target.classList.contains('delete-button')) {
@@ -32,7 +33,7 @@ function createTodo(e) {
    const todoText = todoInput.value.trim();
    if (todoText) {
       todos.push({
-         id: Date.now(),
+         id: uuidv4(),
          text: todoText,
          completed: false,
       });
@@ -48,13 +49,13 @@ function deleteTodo(target) {
    updateLocalStorage();
 }
 
-function clearTodos() {
+function clearAllToDos() {
    todos = [];
    renderTodos();
    updateLocalStorage();
 }
 
-function checkTodos(target) {
+function completeToDo(target) {
    const todoId = target.getAttribute('data-id');
    const todo = todos.find((todo) => todo.id == todoId);
    todo.completed = !todo.completed;
