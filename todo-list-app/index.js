@@ -31,17 +31,19 @@ todoList.addEventListener('click', (e) => {
 function createTodo(e) {
    e.preventDefault();
    const todoText = todoInput.value.trim();
-   if (todoText) {
-      todos.push({
-         id: uuidv4(),
-         text: todoText,
-         completed: false,
-      });
-      todoInput.value = '';
-      renderTodos();
-      updateLocalStorage();
-   }
+   if (!todoText) return;
+
+   todos.push({
+      id: uuidv4(),
+      text: todoText,
+      completed: false,
+   });
+
+   todoInput.value = '';
+   renderTodos();
+   updateLocalStorage();
 }
+
 function deleteTodo(target) {
    const todoId = target.getAttribute('data-id');
    todos = todos.filter((todo) => todo.id != todoId);
